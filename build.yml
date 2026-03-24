@@ -10,13 +10,13 @@ jobs:
     - uses: actions/checkout@v6
 
     - name: Build with Buildozer
-      uses: maxim-lobanov/setup-buildozer@v6
+      uses: maxim-lobanov/setup-buildozer@v4
 
     - name: Run Buildozer
       run: buildozer android debug
 
     - name: Upload APK
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: apk
         path: bin/*.apk
